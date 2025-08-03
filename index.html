@@ -1034,6 +1034,7 @@
                 <li><a href="#roi" class="nav-link">ROI Calculator</a></li>
                 <li><a href="#team" class="nav-link">Our Team</a></li>
                 <li><a href="https://calendly.com/joshua-and-kim/joshua-kim-15-minutes" class="executive-cta" target="_blank" rel="noopener">15-Min ROI Call</a></li>
+                <li><a href="https://docs.google.com/document/d/1fttvB4Dze6mMCS8agxapKAWLUN6ab3km-pX8AuZwaKQ/edit?usp=sharing" class="executive-cta" target="_blank" rel="noopener" style="background: var(--white); color: var(--jcs-navy); border: 2px solid var(--jcs-gold);">📄 Full Proposal</a></li>
             </ul>
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">☰</button>
         </div>
@@ -1055,6 +1056,7 @@
                     
                     <div class="hero-cta-group">
                         <a href="https://calendly.com/joshua-and-kim/joshua-kim-15-minutes" class="cta-primary" target="_blank" rel="noopener">Schedule 15-Min ROI Discussion</a>
+                        <a href="https://docs.google.com/document/d/1fttvB4Dze6mMCS8agxapKAWLUN6ab3km-pX8AuZwaKQ/edit?usp=sharing" class="cta-secondary" target="_blank" rel="noopener">📄 View Traditional Proposal</a>
                         <div style="margin-top: 0.5rem; color: rgba(255,255,255,0.8); font-size: 0.9rem;">⏰ Limited availability - Decision deadline Aug 15th</div>
                     </div>
                 </div>
@@ -1096,7 +1098,7 @@
                     </div>
                     <div style="margin-top: 1.5rem; text-align: center;">
                         <a href="https://calendly.com/joshua-and-kim/joshua-kim-15-minutes" class="cta-primary" target="_blank" rel="noopener">Schedule ROI Discussion</a>
-                        <a href="#deliverables" style="margin-left: 1rem; color: var(--jcs-blue); text-decoration: none; font-weight: 600;">View Detailed Proposal →</a>
+                        <a href="https://docs.google.com/document/d/1fttvB4Dze6mMCS8agxapKAWLUN6ab3km-pX8AuZwaKQ/edit?usp=sharing" style="margin-left: 1rem; color: var(--jcs-blue); text-decoration: none; font-weight: 600;" target="_blank" rel="noopener">📄 Download Full Proposal →</a>
                     </div>
                 </div>
             </div>
@@ -1487,6 +1489,7 @@
                 
                 <div class="cta-buttons">
                     <a href="https://calendly.com/joshua-and-kim/joshua-kim-15-minutes" class="cta-primary" target="_blank" rel="noopener">Schedule 15-Min ROI Call</a>
+                    <a href="https://docs.google.com/document/d/1fttvB4Dze6mMCS8agxapKAWLUN6ab3km-pX8AuZwaKQ/edit?usp=sharing" class="cta-secondary" target="_blank" rel="noopener">📄 Download Traditional Proposal</a>
                 </div>
                 
                 <div style="margin-top: 2rem; font-size: 0.95rem; color: var(--medium-gray);">
@@ -1643,8 +1646,8 @@
         }
 
         function downloadProposal() {
-            // In production, this would trigger a download
-            alert('Thank you! In a live implementation, this would download our full proposal PDF. For this demo, please email joshua@mtm.now to receive the complete proposal.');
+            // Redirect to Google Doc proposal
+            window.open('https://docs.google.com/document/d/1fttvB4Dze6mMCS8agxapKAWLUN6ab3km-pX8AuZwaKQ/edit?usp=sharing', '_blank');
         }
 
         // Add intersection observer for animations
