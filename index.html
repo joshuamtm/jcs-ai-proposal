@@ -107,10 +107,25 @@
             color: var(--jcs-blue);
         }
 
+        .logo-image {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .mtm-logo {
+            height: 35px;
+        }
+
+        .jcs-logo-img {
+            height: 40px;
+        }
+
         .logo-divider {
             width: 2px;
             height: 30px;
             background: var(--jcs-light-blue);
+            margin: 0 1rem;
         }
 
         .jcs-logo {
@@ -415,16 +430,18 @@
         }
 
         .trust-icon {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             background: var(--jcs-light-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             font-weight: bold;
+            text-align: center;
+            line-height: 1.1;
         }
 
         .trust-label {
@@ -1026,7 +1043,7 @@
             <div class="logo-section">
                 <div class="logo">Meet the Moment</div>
                 <div class="logo-divider"></div>
-                <div class="jcs-logo">Jewish Community Services</div>
+                <img src="jcs-logo.png" alt="Jewish Community Services" class="logo-image jcs-logo-img">
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#deliverables" class="nav-link">RFP Deliverables</a></li>
