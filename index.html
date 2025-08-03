@@ -1452,39 +1452,104 @@
             </div>
         </section>
 
-        <!-- Interactive Demo -->
+        <!-- Case Note Summarization Demo -->
         <section id="demo" class="demo-section">
             <div class="container">
-                <h2 class="section-title">Experience AI for JCS</h2>
+                <h2 class="section-title">Case Note Summarization Demo</h2>
+                
+                <div class="executive-takeaway">
+                    <h4>Executive Summary:</h4>
+                    <p>See how AI reduces caseworker documentation time by 30-40% while improving case continuity and compliance tracking.</p>
+                </div>
                 
                 <div class="demo-container">
                     <div class="demo-content">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">See How AI Can Transform Your Workflows</h3>
-                        <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                            Try our interactive demo to explore real AI use cases tailored for JCS's social services context
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Transform 6-Page Case Notes Into Executive Summaries</h3>
+                        <p style="font-size: 1rem; margin-bottom: 2rem;">
+                            Demonstration using anonymized social services case scenario
                         </p>
-                        <button class="demo-button" onclick="startDemo()">Launch Interactive Demo</button>
+                        <button class="demo-button" onclick="showDemo()">View Demo</button>
                     </div>
                 </div>
                 
-                <div class="chat-demo" id="chatDemo">
-                    <h3 style="margin-bottom: 1rem; color: var(--jcs-navy);">AI Assistant Demo for JCS</h3>
-                    <div class="chat-messages" id="chatMessages">
-                        <div class="chat-message">
-                            <strong>AI Assistant:</strong> Welcome! I can demonstrate how AI can help JCS with:
-                            <ul style="margin: 0.5rem 0 0 1.5rem;">
-                                <li>Client intake automation</li>
-                                <li>Case note summarization</li>
-                                <li>Grant proposal assistance</li>
-                                <li>Program outcome analysis</li>
-                                <li>HIPAA-compliant documentation</li>
-                            </ul>
-                            What would you like to explore?
+                <div class="case-demo" id="caseDemo" style="display: none; margin-top: 2rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                        <div>
+                            <h4 style="color: var(--jcs-navy); margin-bottom: 1rem;">📄 Original Case Notes (Sample)</h4>
+                            <div style="background: white; padding: 1.5rem; border-radius: 8px; max-height: 400px; overflow-y: auto; border: 2px solid var(--light-gray);">
+                                <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 1rem;"><strong>Session Date:</strong> March 15, 2024<br>
+                                <strong>Case Worker:</strong> Sarah M.<br>
+                                <strong>Client:</strong> Client #4827 (65-year-old)</p>
+                                
+                                <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 1rem;">
+                                Client arrived 15 minutes late citing transportation issues. Discussed ongoing housing situation - landlord has been pressuring for rent increase from $800 to $1200/month effective May 1st. Client expressing significant anxiety about potential displacement. Current income from SSI ($1,100/month) insufficient to cover proposed rent increase while maintaining basic needs (food, medications, utilities averaging $400/month).
+                                </p>
+                                
+                                <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 1rem;">
+                                Health status: Client reported missing two diabetes medication doses this week due to cost concerns. Blood sugar readings have been irregular (ranging 150-280 over past week per client log). Scheduled endocrinologist appointment for March 28th. Client expressed fear about medical costs impacting housing budget.
+                                </p>
+                                
+                                <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 1rem;">
+                                Action items: 1) Research emergency rental assistance programs 2) Connect with JCS housing coordinator 3) Schedule medication management review 4) Provide bus pass applications 5) Follow up on community center senior program enrollment 6) Schedule next appointment for March 29th
+                                </p>
+                                
+                                <p style="font-size: 0.8rem; color: var(--medium-gray); font-style: italic;">
+                                [This represents 1 page of typical 6-page case documentation with clinical observations, family history, service coordination details, and compliance documentation...]
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--jcs-navy); margin-bottom: 1rem;">✨ AI Summary (Generated in 30 seconds)</h4>
+                            <div style="background: var(--jcs-warm-beige); padding: 1.5rem; border-radius: 8px; border: 2px solid var(--jcs-gold);">
+                                <div style="background: white; padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+                                    <h5 style="color: var(--jcs-blue); margin-bottom: 0.5rem;">🚨 URGENT ACTIONS</h5>
+                                    <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem;">
+                                        <li>Housing crisis: $400 rent increase (May 1) - emergency assistance needed</li>
+                                        <li>Health: Missing diabetes meds, irregular blood sugar (150-280)</li>
+                                        <li>Next appointment: March 29th</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: white; padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+                                    <h5 style="color: var(--jcs-blue); margin-bottom: 0.5rem;">📊 KEY METRICS</h5>
+                                    <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem;">
+                                        <li>Monthly income: $1,100 (SSI)</li>
+                                        <li>Current housing: $800/month</li>
+                                        <li>Proposed rent: $1,200/month (109% of income)</li>
+                                        <li>Other expenses: ~$400/month</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: white; padding: 1rem; border-radius: 4px;">
+                                    <h5 style="color: var(--jcs-blue); margin-bottom: 0.5rem;">🎯 SERVICE PLAN</h5>
+                                    <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem;">
+                                        <li>Housing: Emergency rental assistance application</li>
+                                        <li>Health: Medication review, endocrinologist 3/28</li>
+                                        <li>Transportation: Bus pass application</li>
+                                        <li>Social: Community center enrollment</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="chat-input-group">
-                        <input type="text" class="chat-input" id="userInput" placeholder="Ask about AI use cases for JCS..." onkeypress="handleKeyPress(event)">
-                        <button class="chat-send" onclick="sendMessage()">Send</button>
+                    
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <h3 style="color: var(--jcs-navy); margin-bottom: 2rem;">Measurable Impact for JCS Caseworkers</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                            <div style="background: white; padding: 2rem; border-radius: 12px; border: 2px solid var(--jcs-light-blue); text-align: center;">
+                                <div style="font-size: 2.5rem; color: var(--jcs-blue); font-weight: bold;">6 min</div>
+                                <div style="color: var(--medium-gray);">vs 45 min manual review</div>
+                            </div>
+                            <div style="background: white; padding: 2rem; border-radius: 12px; border: 2px solid var(--jcs-light-blue); text-align: center;">
+                                <div style="font-size: 2.5rem; color: var(--jcs-blue); font-weight: bold;">100%</div>
+                                <div style="color: var(--medium-gray);">Critical items flagged</div>
+                            </div>
+                            <div style="background: white; padding: 2rem; border-radius: 12px; border: 2px solid var(--jcs-light-blue); text-align: center;">
+                                <div style="font-size: 2.5rem; color: var(--jcs-blue); font-weight: bold;">87%</div>
+                                <div style="color: var(--medium-gray);">Time savings achieved</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1601,58 +1666,11 @@
             });
         });
 
-        // Chat demo functionality
-        function startDemo() {
-            document.getElementById('chatDemo').style.display = 'block';
-            document.getElementById('chatDemo').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function sendMessage() {
-            const input = document.getElementById('userInput');
-            const message = input.value.trim();
-            
-            if (message === '') return;
-            
-            // Add user message
-            addMessage('You', message);
-            input.value = '';
-            
-            // Simulate AI response
-            setTimeout(() => {
-                const response = getAIResponse(message.toLowerCase());
-                addMessage('AI Assistant', response);
-            }, 1000);
-        }
-
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
-        }
-
-        function addMessage(sender, message) {
-            const messagesDiv = document.getElementById('chatMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'chat-message';
-            messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
-            messagesDiv.appendChild(messageDiv);
-            messagesDiv.scrollTop = messagesDiv.scrollHeight;
-        }
-
-        function getAIResponse(message) {
-            if (message.includes('intake') || message.includes('client')) {
-                return "For JCS's client intake, AI can automatically extract information from forms, categorize cases by urgency, and ensure all required HIPAA consents are captured. Our Hebrew Free Loan Society implementation reduced intake processing by 40% while maintaining compliance. Would you like to see a sample workflow?";
-            } else if (message.includes('case') || message.includes('notes')) {
-                return "AI can transform case management by automatically summarizing lengthy case notes, extracting action items, and identifying patterns across cases. For JCS, this means caseworkers spend 30% less time on documentation while maintaining comprehensive, HIPAA-compliant records. The system can also flag cases that need urgent attention based on keywords or patterns.";
-            } else if (message.includes('grant') || message.includes('proposal')) {
-                return "Based on our work with New York Community Trust, AI can analyze your successful past grants, match new opportunities to your programs, and help draft compelling narratives. For JCS, this could mean 25% faster grant applications with higher success rates. The AI learns from your organization's voice and mission to maintain authenticity.";
-            } else if (message.includes('hipaa') || message.includes('privacy')) {
-                return "HIPAA compliance is built into every AI solution we implement. This includes: using only de-identified data for AI training, implementing audit trails for all PHI access, ensuring Business Associate Agreements with all vendors, and configuring minimum necessary access controls. Our God's Love We Deliver implementation shows how AI can actually strengthen HIPAA compliance.";
-            } else if (message.includes('outcome') || message.includes('analysis')) {
-                return "AI can analyze program outcomes across all JCS services, identifying trends and predicting which interventions work best for different client populations. This enables data-driven decisions about resource allocation and helps demonstrate impact to funders. The system can generate real-time dashboards showing program effectiveness metrics.";
-            } else {
-                return "That's a great question! AI can help JCS in many ways while maintaining your mission-driven approach. Would you like to explore a specific area like client services, operational efficiency, compliance management, or staff productivity? Each area has unique AI applications designed for social services organizations.";
-            }
+        // Case note demo functionality
+        function showDemo() {
+            const demoDiv = document.getElementById('caseDemo');
+            demoDiv.style.display = 'block';
+            demoDiv.scrollIntoView({ behavior: 'smooth' });
         }
 
         // CTA functions
