@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Moment's AI Strategy Proposal for Jewish Community Services - Transform operations with HIPAA-compliant AI solutions delivering 25-40% efficiency gains">
+    <meta property="og:title" content="AI Strategy Proposal - JCS & Meet the Moment">
+    <meta property="og:description" content="Comprehensive AI implementation strategy for Jewish Community Services with proven nonprofit expertise">
+    <meta property="og:type" content="website">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+    <title>Meet the Moment - AI Strategy Proposal for JCS | Transform Operations with Ethical AI</title>
+    
+    <style>
+        /* CSS Variables for Brand Consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --jcs-blue: #1e4d8b;
+            --jcs-light-blue: #5ba3d0;
+            --jcs-teal: #4a9fb5;
+            --jcs-navy: #003366;
+            --jcs-gold: #f4c430;
+            --jcs-warm-beige: #f5e6d3;
+            --dark-gray: #1f2937;
+            --medium-gray: #6b7280;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --success-green: #10b981;
+            --warning-yellow: #f59e0b;
+            --focus-outline: 2px solid var(--jcs-blue);
+        }
+
+        /* Accessibility - Skip Navigation */
+        .skip-nav {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--jcs-blue);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 1001;
+            border-radius: 4px;
+            transition: top 0.2s;
+        }
+
+        .skip-nav:focus {
+            top: 6px;
+            outline: var(--focus-outline);
+            outline-offset: 2px;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: var(--white);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Focus States for Accessibility */
+        button:focus,
+        input:focus,
+        a:focus,
+        select:focus,
+        textarea:focus {
+            outline: var(--focus-outline);
+            outline-offset: 2px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--jcs-blue);
+        }
+
+        .logo-divider {
+            width: 2px;
+            height: 30px;
+            background: var(--jcs-light-blue);
+        }
+
+        .jcs-logo {
+            font-size: 1.2rem;
+            color: var(--jcs-navy);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--jcs-blue);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--jcs-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--jcs-navy);
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            color: var(--jcs-blue);
+        }
+
+        /* Executive Quick Actions */
+        .executive-cta {
+            background: var(--jcs-gold);
+            color: var(--jcs-navy);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(244, 196, 48, 0.3);
+        }
+
+        .executive-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(244, 196, 48, 0.4);
+        }
+
+        /* Executive Dashboard */
+        .executive-dashboard {
+            background: var(--white);
+            border: 2px solid var(--jcs-gold);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(244, 196, 48, 0.1);
+        }
+
+        .executive-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .executive-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--jcs-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--jcs-navy);
+        }
+
+        .executive-takeaway {
+            background: linear-gradient(135deg, rgba(30, 77, 139, 0.05), rgba(244, 196, 48, 0.05));
+            border-left: 4px solid var(--jcs-blue);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .executive-takeaway h4 {
+            color: var(--jcs-navy);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .executive-takeaway p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--jcs-blue) 0%, var(--jcs-navy) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .value-prop-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .value-prop-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .value-prop-list li::before {
+            content: '✓';
+            color: var(--jcs-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary {
+            background: var(--jcs-gold);
+            color: var(--jcs-navy);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(244, 196, 48, 0.4);
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: var(--jcs-navy);
+        }
+
+        /* Executive Summary Section */
+        .executive-summary {
+            background: var(--light-gray);
+            padding: 3rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--jcs-blue);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .summary-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .summary-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--jcs-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-label {
+            color: var(--medium-gray);
+            font-size: 1rem;
+        }
+
+        /* Trust Signals Bar */
+        .trust-bar {
+            background: var(--jcs-warm-beige);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .trust-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--jcs-light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .trust-label {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            max-width: 150px;
+        }
+
+        /* RFP Alignment Section */
+        .rfp-alignment {
+            padding: 4rem 0;
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .deliverable-card {
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .deliverable-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--jcs-blue);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .deliverable-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .deliverable-card:hover {
+            border-color: var(--jcs-blue);
+            box-shadow: 0 4px 20px rgba(30, 77, 139, 0.1);
+        }
+
+        .deliverable-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .deliverable-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--jcs-light-blue), var(--jcs-blue));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .deliverable-title {
+            font-size: 1.2rem;
+            color: var(--jcs-navy);
+            font-weight: 600;
+        }
+
+        .deliverable-description {
+            color: var(--medium-gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .deliverable-timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .timeline-label {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        .price-label {
+            color: var(--jcs-blue);
+            font-weight: 600;
+        }
+
+        /* HIPAA Expertise Section */
+        .hipaa-section {
+            background: linear-gradient(135deg, rgba(30, 77, 139, 0.05) 0%, rgba(74, 159, 181, 0.05) 100%);
+            padding: 4rem 0;
+        }
+
+        .hipaa-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hipaa-features {
+            list-style: none;
+        }
+
+        .hipaa-features li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(30, 77, 139, 0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .hipaa-features li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--jcs-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .case-study-preview {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .case-study-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .client-logo {
+            width: 50px;
+            height: 50px;
+            background: var(--jcs-gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--jcs-navy);
+        }
+
+        .case-study-result {
+            font-size: 2rem;
+            color: var(--jcs-blue);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        /* ROI Calculator Section */
+        .roi-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .roi-calculator {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 16px;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .input-group input,
+        .input-group select {
+            padding: 0.8rem;
+            border: 2px solid var(--jcs-light-blue);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: var(--jcs-blue);
+        }
+
+        .roi-results {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .roi-headline {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .roi-value {
+            font-size: 3rem;
+            color: var(--success-green);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .roi-timeline {
+            color: var(--medium-gray);
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 4rem 0;
+            background: var(--light-gray);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--jcs-light-blue), var(--jcs-blue));
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            color: var(--jcs-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: var(--medium-gray);
+            margin-bottom: 1rem;
+        }
+
+        .member-credentials {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+
+        .member-credentials li {
+            padding: 0.25rem 0;
+        }
+
+        /* Interactive Demo Section */
+        .demo-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .demo-container {
+            background: linear-gradient(135deg, var(--jcs-teal) 0%, var(--jcs-navy) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .demo-button {
+            background: white;
+            color: var(--jcs-navy);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .demo-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            background: var(--jcs-gold);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: var(--jcs-warm-beige);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-headline {
+            font-size: 2.5rem;
+            color: var(--jcs-navy);
+            margin-bottom: 1rem;
+        }
+
+        .cta-subheadline {
+            font-size: 1.2rem;
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--jcs-navy);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--jcs-gold);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                transition: transform 0.3s ease;
+                opacity: 0;
+                pointer-events: none;
+            }
+            
+            .nav-links.open {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+            
+            .executive-cta {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .executive-dashboard {
+                padding: 1.5rem;
+            }
+            
+            .executive-dashboard > div:first-of-type {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .hipaa-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .calculator-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .cta-headline {
+                font-size: 1.8rem;
+            }
+            
+            .deliverables-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .trust-logos {
+                gap: 1.5rem;
+            }
+            
+            .trust-item {
+                min-width: 120px;
+            }
+        }
+
+        /* Reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Loading state */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Chat Demo */
+        .chat-demo {
+            background: var(--light-gray);
+            border-radius: 16px;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            display: none;
+        }
+
+        .chat-messages {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 1rem;
+        }
+
+        .chat-message {
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-input-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid var(--jcs-light-blue);
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .chat-send {
+            padding: 0.8rem 1.5rem;
+            background: var(--jcs-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .chat-send:hover {
+            background: var(--jcs-navy);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo">Meet the Moment</div>
+                <div class="logo-divider"></div>
+                <div class="jcs-logo">Jewish Community Services</div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#deliverables" class="nav-link">RFP Deliverables</a></li>
+                <li><a href="#expertise" class="nav-link">HIPAA Expertise</a></li>
+                <li><a href="#roi" class="nav-link">ROI Calculator</a></li>
+                <li><a href="#team" class="nav-link">Our Team</a></li>
+                <li><a href="#free-assessment" class="executive-cta">15-Min ROI Call</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transform JCS Operations Through Ethical AI</h1>
+                    <p class="subtitle">Reduce administrative burden by 25-40% while strengthening HIPAA compliance and enhancing client service quality - without compromising your mission or values.</p>
+                    
+                    <ul class="value-prop-list">
+                        <li>Reduce administrative burden by 25-40%</li>
+                        <li>Johns Hopkins & HIPAA-certified expertise</li>
+                        <li>10-13 month ROI payback guarantee</li>
+                    </ul>
+                    
+                    <div class="hero-cta-group">
+                        <a href="#free-assessment" class="cta-primary">Schedule 15-Min ROI Discussion</a>
+                        <div style="margin-top: 0.5rem; color: rgba(255,255,255,0.8); font-size: 0.9rem;">⏰ Limited availability - Decision deadline Aug 15th</div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <!-- Placeholder for visual element -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <!-- Executive Dashboard -->
+        <section class="executive-summary">
+            <div class="container">
+                <div class="executive-dashboard">
+                    <div class="executive-header">
+                        <div class="executive-icon">⚡</div>
+                        <h3>Executive Decision Dashboard</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                        <div>
+                            <h4 style="color: var(--jcs-navy); margin-bottom: 1rem;">ROI Summary</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin: 0.5rem 0; display: flex; justify-content: space-between;"><span>Investment:</span><strong>$85-110K</strong></li>
+                                <li style="margin: 0.5rem 0; display: flex; justify-content: space-between;"><span>Timeline:</span><strong>14 weeks</strong></li>
+                                <li style="margin: 0.5rem 0; display: flex; justify-content: space-between;"><span>Payback:</span><strong>10-13 months</strong></li>
+                                <li style="margin: 0.5rem 0; display: flex; justify-content: space-between;"><span>Efficiency Gain:</span><strong>25-40%</strong></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--jcs-navy); margin-bottom: 1rem;">Key Differentiators</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin: 0.5rem 0;">✓ Johns Hopkins healthcare expertise</li>
+                                <li style="margin: 0.5rem 0;">✓ HIPAA compliance specialists</li>
+                                <li style="margin: 0.5rem 0;">✓ 100% nonprofit focus</li>
+                                <li style="margin: 0.5rem 0;">✓ Fixed-fee transparency</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem; text-align: center;">
+                        <a href="#free-assessment" class="cta-primary">Schedule ROI Discussion</a>
+                        <a href="#deliverables" style="margin-left: 1rem; color: var(--jcs-blue); text-decoration: none; font-weight: 600;">View Detailed Proposal →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="executive-summary">
+            <div class="container">
+                <h2 class="section-title">Executive Summary</h2>
+                
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-number">25-40%</div>
+                        <div class="summary-label">Efficiency Gains</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-number">14</div>
+                        <div class="summary-label">Week Timeline</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-number">$85-110K</div>
+                        <div class="summary-label">Total Investment</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-number">10-13</div>
+                        <div class="summary-label">Month Payback</div>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                    Meet the Moment brings unparalleled expertise in nonprofit AI adoption, with a laser focus on HIPAA compliance and ethical implementation. Our structured approach transforms operations while preserving the human touch that defines JCS's mission.
+                </p>
+            </div>
+        </section>
+
+        <!-- Trust Signals -->
+        <section class="trust-bar">
+            <div class="container">
+                <div class="trust-logos">
+                    <div class="trust-item">
+                        <div class="trust-icon">MIT</div>
+                        <div class="trust-label">Alumni Leadership</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">JHU</div>
+                        <div class="trust-label">Healthcare AI Expertise</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">40%</div>
+                        <div class="trust-label">Proven Efficiency Gains</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">100%</div>
+                        <div class="trust-label">Nonprofit Focus</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RFP Deliverables Section -->
+        <section id="deliverables" class="rfp-alignment">
+            <div class="container">
+                <h2 class="section-title">RFP-Aligned Deliverables</h2>
+                
+                <div class="executive-takeaway">
+                    <h4>Executive Summary:</h4>
+                    <p>Complete 14-week implementation delivering all RFP requirements with transparent milestones and pricing. Total investment $85-110K for measurable operational transformation.</p>
+                </div>
+                
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <div class="deliverable-header">
+                            <div class="deliverable-icon">🔍</div>
+                            <h3 class="deliverable-title">AI Readiness Assessment</h3>
+                        </div>
+                        <p class="deliverable-description">
+                            Comprehensive analysis of JCS's technology environment, privacy requirements, and HIPAA compliance needs. Includes stakeholder interviews and system inventory.
+                        </p>
+                        <div class="deliverable-timeline">
+                            <span class="timeline-label">Weeks 1-3</span>
+                            <span class="price-label">$5-10K</span>
+                        </div>
+                    </div>
+                    
+                    <div class="deliverable-card">
+                        <div class="deliverable-header">
+                            <div class="deliverable-icon">💡</div>
+                            <h3 class="deliverable-title">Opportunity Identification</h3>
+                        </div>
+                        <p class="deliverable-description">
+                            Map operational bottlenecks and function-specific use cases. Prioritize AI solutions based on mission alignment and regulatory considerations.
+                        </p>
+                        <div class="deliverable-timeline">
+                            <span class="timeline-label">Weeks 4-5</span>
+                            <span class="price-label">$5-15K</span>
+                        </div>
+                    </div>
+                    
+                    <div class="deliverable-card">
+                        <div class="deliverable-header">
+                            <div class="deliverable-icon">🎓</div>
+                            <h3 class="deliverable-title">Staff Training (2 Sessions)</h3>
+                        </div>
+                        <p class="deliverable-description">
+                            Interactive sessions on AI fundamentals, hands-on practice with JCS-specific scenarios, and ethical considerations. Includes resource guides and recordings.
+                        </p>
+                        <div class="deliverable-timeline">
+                            <span class="timeline-label">Weeks 5-7</span>
+                            <span class="price-label">$5-7K</span>
+                        </div>
+                    </div>
+                    
+                    <div class="deliverable-card">
+                        <div class="deliverable-header">
+                            <div class="deliverable-icon">📊</div>
+                            <h3 class="deliverable-title">AI Strategy Report</h3>
+                        </div>
+                        <p class="deliverable-description">
+                            Actionable recommendations with implementation roadmap, governance framework, and leadership workshop to discuss findings.
+                        </p>
+                        <div class="deliverable-timeline">
+                            <span class="timeline-label">Weeks 8-10</span>
+                            <span class="price-label">$8-20K</span>
+                        </div>
+                    </div>
+                    
+                    <div class="deliverable-card">
+                        <div class="deliverable-header">
+                            <div class="deliverable-icon">📋</div>
+                            <h3 class="deliverable-title">AI Policy & Guidelines</h3>
+                        </div>
+                        <p class="deliverable-description">
+                            HIPAA-compliant policies for AI usage, data handling, consent management, and ethical considerations for vulnerable populations.
+                        </p>
+                        <div class="deliverable-timeline">
+                            <span class="timeline-label">Weeks 9-11</span>
+                            <span class="price-label">$3-8K</span>
+                        </div>
+                    </div>
+                    
+                    <div class="deliverable-card">
+                        <div class="deliverable-header">
+                            <div class="deliverable-icon">🚀</div>
+                            <h3 class="deliverable-title">Two AI Pilots</h3>
+                        </div>
+                        <p class="deliverable-description">
+                            Implement and monitor controlled AI pilots with full support, performance metrics, and scaling recommendations.
+                        </p>
+                        <div class="deliverable-timeline">
+                            <span class="timeline-label">Weeks 12-14</span>
+                            <span class="price-label">$25-50K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIPAA Expertise Section -->
+        <section id="expertise" class="hipaa-section">
+            <div class="container">
+                <h2 class="section-title">HIPAA & Privacy Expertise</h2>
+                
+                <div class="executive-takeaway">
+                    <h4>Executive Summary:</h4>
+                    <p>Johns Hopkins-trained team with proven HIPAA compliance record. Successfully reduced compliance effort to <1 day/month while implementing AI solutions.</p>
+                </div>
+                
+                <div class="hipaa-content">
+                    <div class="hipaa-text">
+                        <h3 style="color: var(--jcs-navy); margin-bottom: 1.5rem;">Why Our HIPAA Experience Matters</h3>
+                        
+                        <ul class="hipaa-features">
+                            <li>
+                                <div class="feature-icon">✓</div>
+                                <div>
+                                    <strong>Business Associate Agreements:</strong> We ensure all AI vendors sign robust BAAs with specific provisions for AI data processing
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-icon">✓</div>
+                                <div>
+                                    <strong>De-identification Standards:</strong> Implement HIPAA Safe Harbor and Expert Determination methods for AI training data
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-icon">✓</div>
+                                <div>
+                                    <strong>Minimum Necessary Access:</strong> Configure AI tools to access only required PHI for permissible purposes
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-icon">✓</div>
+                                <div>
+                                    <strong>Risk Analysis:</strong> Conduct AI-specific security risk assessments addressing unique ML/AI vulnerabilities
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-icon">✓</div>
+                                <div>
+                                    <strong>Audit Controls:</strong> Implement comprehensive logging and monitoring for all AI-PHI interactions
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="case-study-preview">
+                        <div class="case-study-header">
+                            <div class="client-logo">GLWD</div>
+                            <div>
+                                <h4 style="color: var(--jcs-navy);">God's Love We Deliver</h4>
+                                <p style="color: var(--medium-gray); font-size: 0.9rem;">HIPAA-Covered Entity</p>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-result">< 1 day/month</div>
+                        <p>Compliance effort reduced through AI-enhanced monitoring</p>
+                        
+                        <p style="margin-top: 1rem; line-height: 1.6;">
+                            As virtual CISO, we implemented AI-powered compliance monitoring that automatically satisfies 20-50% of HIPAA controls while maintaining strict PHI protection standards.
+                        </p>
+                        
+                        <a href="#case-studies" style="color: var(--jcs-blue); text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1rem;">
+                            View All Case Studies →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section id="roi" class="roi-section">
+            <div class="container">
+                <h2 class="section-title">Your Investment & Returns</h2>
+                
+                <div class="executive-takeaway">
+                    <h4>Executive Summary:</h4>
+                    <p>Based on JCS's 200+ staff, expect $126K annual savings from 30% efficiency gains. Investment pays back in 10-13 months with continued returns.</p>
+                </div>
+                
+                <div class="roi-calculator">
+                    <form id="roiForm">
+                        <div class="calculator-inputs">
+                            <div class="input-group">
+                                <label for="staffCount">Number of Staff Members</label>
+                                <input type="number" id="staffCount" value="200" min="10" max="1000">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="avgSalary">Average Hourly Rate</label>
+                                <input type="number" id="avgSalary" value="35" min="20" max="100">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="adminTime">% Time on Admin Tasks</label>
+                                <select id="adminTime">
+                                    <option value="20">20%</option>
+                                    <option value="30" selected>30%</option>
+                                    <option value="40">40%</option>
+                                    <option value="50">50%</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="efficiencyGain">Expected Efficiency Gain</label>
+                                <select id="efficiencyGain">
+                                    <option value="25">Conservative (25%)</option>
+                                    <option value="30" selected>Moderate (30%)</option>
+                                    <option value="40">Optimistic (40%)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="roi-results">
+                            <p class="roi-headline">Projected Annual Savings</p>
+                            <div class="roi-value" id="roiValue">$126,000</div>
+                            <p class="roi-timeline">Investment payback in <strong id="paybackMonths">10</strong> months</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <div class="container">
+                <h2 class="section-title">Your AI Implementation Team</h2>
+                
+                <div class="executive-takeaway">
+                    <h4>Executive Summary:</h4>
+                    <p>MIT/Berkeley-educated leaders with 60+ years nonprofit experience. Co-authored "AI for Nonprofits" bestseller and Johns Hopkins healthcare background.</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">JP</div>
+                        <h3 class="member-name">Joshua Peskay</h3>
+                        <p class="member-role">vCIO/vCISO & AI Strategy Lead</p>
+                        <p style="margin: 1rem 0; line-height: 1.6;">
+                            Current nonprofit vCIO/vCISO with 30+ years experience. Contributed cybersecurity chapter to "AI for Nonprofits" bestseller. Named 2024 Nonprofit Trailblazer.
+                        </p>
+                        <ul class="member-credentials">
+                            <li>• CISSP, CISM Certified</li>
+                            <li>• Johns Hopkins Healthcare AI</li>
+                            <li>• PMP & Asana Certified</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-avatar">KS</div>
+                        <h3 class="member-name">Kim Snyder</h3>
+                        <p class="member-role">Implementation Lead</p>
+                        <p style="margin: 1rem 0; line-height: 1.6;">
+                            Berkeley MBA with 30+ years nonprofit transformation experience. Certified privacy professional and change management expert.
+                        </p>
+                        <ul class="member-credentials">
+                            <li>• Berkeley Haas MBA</li>
+                            <li>• CIPP/US Privacy Professional</li>
+                            <li>• Nonprofit Change Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-avatar">MTM</div>
+                        <h3 class="member-name">Meet the Moment Team</h3>
+                        <p class="member-role">Extended Expertise</p>
+                        <p style="margin: 1rem 0; line-height: 1.6;">
+                            Our core team includes additional specialists in data science, technical implementation, and change management to ensure comprehensive support.
+                        </p>
+                        <ul class="member-credentials">
+                            <li>• Data Science Specialists</li>
+                            <li>• Technical Implementation</li>
+                            <li>• Change Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo -->
+        <section id="demo" class="demo-section">
+            <div class="container">
+                <h2 class="section-title">Experience AI for JCS</h2>
+                
+                <div class="demo-container">
+                    <div class="demo-content">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">See How AI Can Transform Your Workflows</h3>
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                            Try our interactive demo to explore real AI use cases tailored for JCS's social services context
+                        </p>
+                        <button class="demo-button" onclick="startDemo()">Launch Interactive Demo</button>
+                    </div>
+                </div>
+                
+                <div class="chat-demo" id="chatDemo">
+                    <h3 style="margin-bottom: 1rem; color: var(--jcs-navy);">AI Assistant Demo for JCS</h3>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="chat-message">
+                            <strong>AI Assistant:</strong> Welcome! I can demonstrate how AI can help JCS with:
+                            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                <li>Client intake automation</li>
+                                <li>Case note summarization</li>
+                                <li>Grant proposal assistance</li>
+                                <li>Program outcome analysis</li>
+                                <li>HIPAA-compliant documentation</li>
+                            </ul>
+                            What would you like to explore?
+                        </div>
+                    </div>
+                    <div class="chat-input-group">
+                        <input type="text" class="chat-input" id="userInput" placeholder="Ask about AI use cases for JCS..." onkeypress="handleKeyPress(event)">
+                        <button class="chat-send" onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section id="free-assessment" class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-headline">Ready to Meet This Moment?</h2>
+                <p class="cta-subheadline">
+                    Schedule a 15-minute ROI discussion with our Johns Hopkins-trained team
+                </p>
+                
+                <div class="executive-takeaway" style="max-width: 600px; margin: 2rem auto;">
+                    <h4>Next Steps for JCS:</h4>
+                    <p>Our team will assess your specific needs, demonstrate relevant AI applications, and provide a customized ROI projection for your 200+ staff organization.</p>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="mailto:joshua@mtm.now?subject=JCS AI Strategy - ROI Discussion Request&body=Hello Joshua and Kim,%0D%0A%0D%0AI'm interested in scheduling a 15-minute ROI discussion for JCS's AI strategy needs.%0D%0A%0D%0APlease let me know your availability this week.%0D%0A%0D%0ABest regards," class="cta-primary">Schedule 15-Min ROI Call</a>
+                </div>
+                
+                <div style="margin-top: 2rem; font-size: 0.95rem; color: var(--medium-gray);">
+                    <p>⏰ <strong>Urgent:</strong> RFP decision deadline August 15th</p>
+                    <p style="margin-top: 0.5rem;">Direct contact: <a href="mailto:joshua@mtm.now" style="color: var(--jcs-blue); font-weight: 600;">joshua@mtm.now</a> | <a href="mailto:kim@mtm.now" style="color: var(--jcs-blue); font-weight: 600;">kim@mtm.now</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#resources">Resources</a>
+            </div>
+            <p>© 2025 Meet the Moment. Nonprofit-exclusive AI consultancy.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('open');
+        }
+
+        // ROI Calculator
+        function calculateROI() {
+            const staffCount = parseInt(document.getElementById('staffCount').value);
+            const avgSalary = parseInt(document.getElementById('avgSalary').value);
+            const adminTime = parseInt(document.getElementById('adminTime').value) / 100;
+            const efficiencyGain = parseInt(document.getElementById('efficiencyGain').value) / 100;
+            
+            // Calculate annual savings
+            const hoursPerYear = 2080; // Standard work hours per year
+            const adminHours = staffCount * hoursPerYear * adminTime;
+            const savedHours = adminHours * efficiencyGain;
+            const annualSavings = savedHours * avgSalary;
+            
+            // Calculate payback period (assuming $100k investment)
+            const investment = 100000;
+            const monthlyPayback = (investment / annualSavings) * 12;
+            
+            // Update display
+            document.getElementById('roiValue').textContent = '$' + annualSavings.toLocaleString();
+            document.getElementById('paybackMonths').textContent = Math.round(monthlyPayback);
+        }
+
+        // Add event listeners for ROI calculator
+        document.querySelectorAll('#roiForm input, #roiForm select').forEach(input => {
+            input.addEventListener('change', calculateROI);
+        });
+
+        // Initialize ROI calculation
+        calculateROI();
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Chat demo functionality
+        function startDemo() {
+            document.getElementById('chatDemo').style.display = 'block';
+            document.getElementById('chatDemo').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            
+            if (message === '') return;
+            
+            // Add user message
+            addMessage('You', message);
+            input.value = '';
+            
+            // Simulate AI response
+            setTimeout(() => {
+                const response = getAIResponse(message.toLowerCase());
+                addMessage('AI Assistant', response);
+            }, 1000);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function addMessage(sender, message) {
+            const messagesDiv = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'chat-message';
+            messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function getAIResponse(message) {
+            if (message.includes('intake') || message.includes('client')) {
+                return "For JCS's client intake, AI can automatically extract information from forms, categorize cases by urgency, and ensure all required HIPAA consents are captured. Our Hebrew Free Loan Society implementation reduced intake processing by 40% while maintaining compliance. Would you like to see a sample workflow?";
+            } else if (message.includes('case') || message.includes('notes')) {
+                return "AI can transform case management by automatically summarizing lengthy case notes, extracting action items, and identifying patterns across cases. For JCS, this means caseworkers spend 30% less time on documentation while maintaining comprehensive, HIPAA-compliant records. The system can also flag cases that need urgent attention based on keywords or patterns.";
+            } else if (message.includes('grant') || message.includes('proposal')) {
+                return "Based on our work with New York Community Trust, AI can analyze your successful past grants, match new opportunities to your programs, and help draft compelling narratives. For JCS, this could mean 25% faster grant applications with higher success rates. The AI learns from your organization's voice and mission to maintain authenticity.";
+            } else if (message.includes('hipaa') || message.includes('privacy')) {
+                return "HIPAA compliance is built into every AI solution we implement. This includes: using only de-identified data for AI training, implementing audit trails for all PHI access, ensuring Business Associate Agreements with all vendors, and configuring minimum necessary access controls. Our God's Love We Deliver implementation shows how AI can actually strengthen HIPAA compliance.";
+            } else if (message.includes('outcome') || message.includes('analysis')) {
+                return "AI can analyze program outcomes across all JCS services, identifying trends and predicting which interventions work best for different client populations. This enables data-driven decisions about resource allocation and helps demonstrate impact to funders. The system can generate real-time dashboards showing program effectiveness metrics.";
+            } else {
+                return "That's a great question! AI can help JCS in many ways while maintaining your mission-driven approach. Would you like to explore a specific area like client services, operational efficiency, compliance management, or staff productivity? Each area has unique AI applications designed for social services organizations.";
+            }
+        }
+
+        // CTA functions
+        function scheduleAssessment() {
+            // In production, this would open a calendar booking tool
+            alert('Thank you for your interest! In a live implementation, this would open our calendar booking system. For now, please email joshua@mtm.now to schedule your free assessment.');
+        }
+
+        function downloadProposal() {
+            // In production, this would trigger a download
+            alert('Thank you! In a live implementation, this would download our full proposal PDF. For this demo, please email joshua@mtm.now to receive the complete proposal.');
+        }
+
+        // Add intersection observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
